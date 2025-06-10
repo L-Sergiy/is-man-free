@@ -49,10 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     uaBtn.addEventListener('click', () => setLanguage('ua'));
     enBtn.addEventListener('click', () => setLanguage('en'));
 
-    // Set default language
     setLanguage('ua');
 
-    // Add smooth scrolling navigation
     document.querySelectorAll('[data-scroll]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -68,19 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add accordion functionality
     document.querySelectorAll('.bible-quote').forEach(quote => {
         quote.addEventListener('click', () => {
             const bibleText = quote.nextElementSibling;
             
-            // Toggle the max-height
             if (bibleText.style.maxHeight) {
                 bibleText.style.maxHeight = null;
             } else {
                 bibleText.style.maxHeight = bibleText.scrollHeight + "px";
             }
             
-            // Add visual feedback
             quote.classList.toggle('text-purple-700');
         });
     });

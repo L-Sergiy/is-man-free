@@ -8,14 +8,14 @@
     <meta name="description" content="Філософське дослідження свободи волі людини у контексті Божого передбачення. Аналіз біблійного погляду на свободу вибору.">
     <meta name="keywords" content="свобода волі, Боже передбачення, свобода вибору, теологія, філософія, християнство">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="uk">    <!-- Canonical -->
+    <meta name="language" content="uk">
     <link rel="canonical" href="https://l-sergiy.github.io/is-man-free/">
 
-    <!-- Alternate Language Versions -->
+
     <link rel="alternate" hreflang="uk" href="https://l-sergiy.github.io/is-man-free/">
     <link rel="alternate" hreflang="en" href="https://l-sergiy.github.io/is-man-free/en">
 
-    <!-- Open Graph -->
+
     <meta property="og:title" content="Чи справді людина вільна? | Is man truly free?">
     <meta property="og:description" content="Філософське дослідження свободи волі людини у контексті Божого передбачення. Аналіз біблійного погляду на свободу вибору.">
     <meta property="og:image" content="https://l-sergiy.github.io/is-man-free/og-image.jpg">
@@ -26,7 +26,7 @@
     <meta property="article:author" content="Сергій">
     <meta property="article:tag" content="свобода волі, теологія, філософія">
 
-    <!-- Twitter -->
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Чи справді людина вільна? | Is man truly free?">
     <meta name="twitter:description" content="Філософське дослідження свободи волі людини у контексті Божого передбачення. Аналіз біблійного погляду на свободу вибору.">    <meta name="twitter:image" content="https://l-sergiy.github.io/is-man-free/og-image.jpg">
@@ -34,7 +34,7 @@
     <meta name="twitter:site" content="@l_sergiy">
     <meta name="twitter:url" content="https://l-sergiy.github.io/is-man-free/">
 
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>    
     <script type="application/ld+json">      {      "@context": "https://schema.org",
       "@type": "Article",
@@ -83,9 +83,9 @@
 <body class="w-full h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
   <div class="w-[100%] mx-auto flex flex-col items-center justify-center">
     <header class="flex justify-between items-center w-full bg-white/50 backdrop-blur-md fixed top-0 left-0 right-0 transition-transform duration-300">
-      <!-- Mobile menu button -->
+
       <button id="menuBtn" class="lg:hidden z-50 p-4 text-4xl">☰</button>
-      <!-- Desktop menu -->
+
       <ul class="hidden lg:flex">
         <li class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[40px] sm:my-[60px] font-semibold cursor-pointer" data-translate="thesis" data-scroll="thesis">Теза</li>
         <li class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[40px] sm:my-[60px] font-semibold cursor-pointer" data-translate="arguments" data-scroll="arguments">Аргументи</li>
@@ -94,14 +94,12 @@
         <li class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[40px] sm:my-[60px] font-semibold cursor-pointer" data-translate="call" data-scroll="call">Заклик</li>
       </ul>
 
-      <!-- Language switcher -->
       <div class="flex">
         <button class="text-4xl sm:text-4xl my-[40px] sm:my-[60px] m-[9px] sm:m-[40px] font-semibold" data-lang="ua">ua</button>
         <button class="text-4xl sm:text-4xl my-[40px] sm:my-[60px] m-[9px] sm:m-[40px] font-semibold" data-lang="en">en</button>
       </div>
     </header>
 
-    <!-- Mobile menu overlay -->
     <div id="mobileMenu" class="fixed inset-0 bg-white/95 z-40 hidden lg:hidden flex-col items-center justify-center">
       <ul class="flex flex-col items-center space-y-8">
         <li class="text-4xl font-semibold cursor-pointer" data-translate="thesis" data-scroll="thesis">Теза</li>
@@ -148,7 +146,7 @@
 
   <script src="translations.js"></script>
   <script>
-    // Add this before other scripts
+
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileMenuItems = mobileMenu.getElementsByTagName('li');
@@ -167,12 +165,11 @@
       });
     });
 
-    // Accordion functionality for Bible quotes
     document.querySelectorAll('.bible-quote').forEach(item => {
       item.addEventListener('click', event => {
         const text = item.nextElementSibling;
         text.classList.toggle('max-h-0');
-        text.classList.toggle('max-h-[200px]'); // Adjust based on content
+        text.classList.toggle('max-h-[200px]');
       })
     })
 
@@ -188,10 +185,8 @@
       }
       
       if (currentScroll > lastScroll) {
-        // Scrolling down
         header.style.transform = 'translateY(-100%)';
       } else {
-        // Scrolling up
         header.style.transform = 'translateY(0)';
       }
       
