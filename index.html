@@ -99,10 +99,9 @@
         <button class="text-4xl sm:text-4xl my-[30px] px-3 sm:my-[60px] m-[9px] sm:m-[40px] font-semibold" data-lang="ua">ua</button>
         <button class="text-4xl sm:text-4xl my-[30px] px-3 sm:my-[60px] m-[9px] sm:m-[40px] font-semibold" data-lang="en">en</button>
       </div>
-    </header>
-
-    <!-- Mobile menu overlay -->
+    </header>    <!-- Mobile menu overlay -->
     <div id="mobileMenu" class="fixed inset-0 bg-white/95 z-40 hidden lg:hidden flex-col items-center justify-center">
+      <button id="closeBtn" class="absolute top-4 right-4 text-4xl font-light cursor-pointer">✕</button>
       <ul class="flex flex-col items-center space-y-8">
         <li class="text-4xl font-semibold cursor-pointer" data-translate="thesis" data-scroll="thesis">Теза</li>
         <li class="text-4xl font-semibold cursor-pointer" data-translate="arguments" data-scroll="arguments">Аргументи</li>
@@ -149,18 +148,26 @@
     </div>
   </div>
 
-  <script src="translations.js"></script>
-  <script>
+  <script src="translations.js"></script>  <script>
     // Add this before other scripts
     const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileMenuItems = mobileMenu.getElementsByTagName('li');
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('flex');
+      menuBtn.textContent = '☰';
+    }
 
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
       mobileMenu.classList.toggle('flex');
-      menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+      menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '☰';
     });
+
+    closeBtn.addEventListener('click', closeMobileMenu);
 
     Array.from(mobileMenuItems).forEach(item => {
       item.addEventListener('click', () => {
