@@ -110,7 +110,7 @@
       <h1 class="text-5xl sm:text-[180px] leading-snug sm:leading-normal px-8 sm:p-9 mt-[100px] font-medium tracking-widest sm:tracking-tighter" data-translate="mainQuestion">
         Чи справді людина вільна, якщо Бог передбачив її шлях?</h1>
     </div>
-    <p id="arguments" class="text-[45px] sm:text-[120px] mt-[230px] font-medium" data-translate="arguments">Аргументи</p>
+    <p id="arguments" class="text-[45px] sm:text-[120px] mt-[270px] font-medium" data-translate="arguments">Аргументи</p>
     <div class="bg-white/30 sm:mx-96 m-5 rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out ">
       <h2 class="text-[25px] sm:text-[35px] w-auto p-3 sm:p-8 font-semibold" data-translate="arg1">Бог — всевідаючий.
         Він знає, що станеться завтра, але це не означає, що Він змушує людину діяти певним чином. 
@@ -159,51 +159,46 @@
     });
   </script>
   <script src="translations.js"></script>  <script>
-
     const menuBtn = document.getElementById('menuBtn');
     const closeBtn = document.getElementById('closeBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuItems = mobileMenu.getElementsByTagName('li');
+    const header = document.querySelector('header');
+    let lastScroll = 0;
+    let ticking = false;
 
-    function closeMobileMenu() {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('flex');
-      menuBtn.textContent = '☰';
-    }
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('flex');
-      menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '☰';
-    });
-
-    closeBtn.addEventListener('click', closeMobileMenu);
-
-    Array.from(mobileMenuItems).forEach(item => {
-      item.addEventListener('click', () => {
+    function toggleMenu(forceClose = false) {
+      if (forceClose) {
         mobileMenu.classList.add('hidden');
         mobileMenu.classList.remove('flex');
         menuBtn.textContent = '☰';
-      });    });
-
-    let lastScroll = 0;
-    const header = document.querySelector('header');
-    
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      
-      if (currentScroll <= 0) {
-        header.style.transform = 'translateY(0)';
         return;
       }
       
-      if (currentScroll > lastScroll) {
-        header.style.transform = 'translateY(-100%)';
-      } else {
-        header.style.transform = 'translateY(0)';
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+      menuBtn.textContent = '☰';
+    }
+
+    // Event Listeners
+    menuBtn.addEventListener('click', () => toggleMenu());
+    closeBtn.addEventListener('click', () => toggleMenu(true));
+    document.querySelectorAll('#mobileMenu li').forEach(item => {
+      item.addEventListener('click', () => toggleMenu(true));
+    });
+
+    // Optimized scroll handler with throttling
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScroll = window.pageYOffset;
+          header.style.transform = currentScroll <= 0 || currentScroll < lastScroll
+            ? 'translateY(0)'
+            : 'translateY(-100%)';
+          lastScroll = currentScroll;
+          ticking = false;
+        });
+        ticking = true;
       }
-      
-      lastScroll = currentScroll;
     });
   </script>
 </body>
