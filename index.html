@@ -8,14 +8,12 @@
     <meta name="description" content="Філософське дослідження свободи волі людини у контексті Божого передбачення. Аналіз біблійного погляду на свободу вибору.">
     <meta name="keywords" content="свобода волі, Боже передбачення, свобода вибору, теологія, філософія, християнство">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="uk">    <!-- Canonical -->
+    <meta name="language" content="uk">
     <link rel="canonical" href="https://l-sergiy.github.io/is-man-free/">
 
-    <!-- Alternate Language Versions -->
     <link rel="alternate" hreflang="uk" href="https://l-sergiy.github.io/is-man-free/">
     <link rel="alternate" hreflang="en" href="https://l-sergiy.github.io/is-man-free/en">
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Чи справді людина вільна? | Is man truly free?">
     <meta property="og:description" content="Філософське дослідження свободи волі людини у контексті Божого передбачення. Аналіз біблійного погляду на свободу вибору.">
     <meta property="og:image" content="https://l-sergiy.github.io/is-man-free/og-image.jpg">
@@ -26,7 +24,6 @@
     <meta property="article:author" content="Сергій">
     <meta property="article:tag" content="свобода волі, теологія, філософія">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Чи справді людина вільна? | Is man truly free?">
     <meta name="twitter:description" content="Філософське дослідження свободи волі людини у контексті Божого передбачення. Аналіз біблійного погляду на свободу вибору.">    <meta name="twitter:image" content="https://l-sergiy.github.io/is-man-free/og-image.jpg">
@@ -34,7 +31,6 @@
     <meta name="twitter:site" content="@l_sergiy">
     <meta name="twitter:url" content="https://l-sergiy.github.io/is-man-free/">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>    
     <script type="application/ld+json">      {      "@context": "https://schema.org",
       "@type": "Article",
@@ -80,12 +76,12 @@
     }
     </script>
 </head>
-<body class="w-full h-screen bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 overflow-x-hidden">
+<body class="bg-gradient-to-r from-blue-600 via-purple-500 to-pink-400 overflow-x-hidden">
   <div class="mx-auto flex flex-col items-center justify-center">
-    <header class="flex justify-between items-center w-full bg-white/50 backdrop-blur-md fixed top-0 left-0 right-0 transition-transform duration-300">
-      <!-- Mobile menu button -->
+    <header class="flex justify-between items-center w-full bg-white/50 backdrop-blur-xl fixed top-0 left-0 right-0 transition-transform duration-300">
+
       <button id="menuBtn" class="lg:hidden z-50 p-4 text-4xl">☰</button>
-      <!-- Desktop menu -->
+
       <ul class="hidden lg:flex">
         <li class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[60px] font-semibold cursor-pointer" data-translate="thesis" data-scroll="thesis">Теза</li>
         <li class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[60px] font-semibold cursor-pointer" data-translate="arguments" data-scroll="arguments">Аргументи</li>
@@ -94,12 +90,11 @@
         <li class="m-[9px] sm:m-[40px] text-2xl sm:text-4xl my-[10px] sm:my-[60px] font-semibold cursor-pointer" data-translate="call" data-scroll="call">Заклик</li>
       </ul>
 
-      <!-- Language switcher -->
       <div class="flex">
         <button class="text-4xl sm:text-4xl my-[30px] px-3 sm:my-[60px] m-[9px] sm:m-[40px] font-semibold" data-lang="ua">ua</button>
         <button class="text-4xl sm:text-4xl my-[30px] px-3 sm:my-[60px] m-[9px] sm:m-[40px] font-semibold" data-lang="en">en</button>
       </div>
-    </header>    <!-- Mobile menu overlay -->
+    </header>
     <div id="mobileMenu" class="fixed inset-0 bg-white/95 z-40 hidden lg:hidden flex-col items-center justify-center">
       <button id="closeBtn" class="absolute top-4 right-4 text-4xl font-light cursor-pointer">✕</button>
       <ul class="flex flex-col items-center space-y-8">
@@ -112,44 +107,59 @@
     </div>
 
     <div id="thesis">
-      <h1 class="text-[60px] sm:text-[190px] leading-relaxed sm:leading-tight px-8 sm:p-9 mt-[110px] font-medium tracking-tighter" data-translate="mainQuestion">Чи справді людина вільна, якщо Бог передбачив її шлях?</h1>
+      <h1 class="text-5xl sm:text-[180px] leading-snug sm:leading-normal px-8 sm:p-9 mt-[100px] font-medium tracking-widest sm:tracking-tighter" data-translate="mainQuestion">
+        Чи справді людина вільна, якщо Бог передбачив її шлях?</h1>
     </div>
-    <p id="arguments" class="text-[50px] sm:text-[120px] mt-[320px] sm:mt-[200px] font-medium" data-translate="arguments">Аргументи</p>
-    <div class="bg-white sm:mx-[190px] mt-[40px] mb-[90px] rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
-      <h2 class="text-[30px] sm:text-[50px] w-[300px] sm:w-[1400px] sm:p-8 p-5 font-semibold" data-translate="arg1">Бог — всевідаючий.
+    <p id="arguments" class="text-[45px] sm:text-[120px] mt-[230px] font-medium" data-translate="arguments">Аргументи</p>
+    <div class="bg-white/30 sm:mx-96 m-5 rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out ">
+      <h2 class="text-[25px] sm:text-[35px] w-auto p-3 sm:p-8 font-semibold" data-translate="arg1">Бог — всевідаючий.
         Він знає, що станеться завтра, але це не означає, що Він змушує людину діяти певним чином. 
         Як мати знає, що дитина впаде, якщо побіжить по слизькій підлозі — але не штовхає її — так і Бог знає наші дії, не змушуючи до них.</h2>
     </div>
-    <div class="bg-white sm:mx-[190px] mb-[90px] rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">      
-      <h3 class="text-[30px] sm:text-[50px] w-[300px] sm:w-[1400px] sm:p-8 p-5 font-semibold" data-translate="arg2">Святе Письмо сповнене звернень, у яких Бог прямо закликає людину обирати.
+    <div class="bg-white/30 sm:mx-96 m-5 rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">      
+      <h3 class="text-[25px] sm:text-[35px] w-auto p-3 sm:p-8 font-semibold" data-translate="arg2">Святе Письмо сповнене звернень, 
+        у яких Бог прямо закликає людину обирати.
         «Життя і смерть дав я перед тобою, благословення і прокляття. І вибери життя, щоб жив ти і потомство твоє» (Повторення Закону 30:19).
         Цей заклик був би абсурдним, якби вибору не існувало. Але ми маємо його — і Бог поважає його.</h3>
     </div>
-    <div class="bg-white sm:mx-[190px] mb-[90px] rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
-      <h4 class="text-[30px] sm:text-[50px] w-[300px] sm:w-[1400px] p-5 sm:p-8 font-semibold" data-translate="arg3">Бог хоче, щоб ми Його любили, а любов може існувати лише у свободі.
+    <div class="bg-white/30 sm:mx-96 m-5 rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <h4 class="text-[25px] sm:text-[35px] w-auto p-3 sm:p-8 font-semibold" data-translate="arg3">Бог хоче, щоб ми Його любили, 
+        а любов може існувати лише у свободі.
         «Ми любимо Його, бо Він перший полюбив нас» (1 Івана 4:19).
         Ми не запрограмовані машини. Наша любов — добровільна відповідь на Його благодать.</h4>
     </div>
-    <p id="example" class="text-[50px] sm:text-[120px] mt-[40px] font-medium" data-translate="example">Приклад</p>
-    <div class="bg-white sm:mx-[190px] mt-[40px] mb-[90px] rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
-      <h5 class="text-[30px] sm:text-[50px] w-[300px] sm:w-[1400px] p-5 sm:p-8 font-semibold" data-translate="example1">Ісус сказав під час Таємної вечері:
+    <p id="example" class="text-[45px] sm:text-[120px] mt-[40px] font-medium" data-translate="example">Приклад</p>
+    <div class="bg-white/30 sm:mx-96 m-5 mb-[90px] rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <h5 class="text-[25px] sm:text-[35px] w-auto p-3 sm:p-8 font-semibold" data-translate="example1">Ісус сказав під час Таємної вечері:
         «Поправді кажу вам, що один із вас видасть Мене» (Івана 13:21).
         Це був не наказ, а попередження. Юда міг зупинитись. Але свідомо обрав зраду — і поніс вічні наслідки.</h5>
     </div>
-    <p id="conclusion" class="text-[50px] sm:text-[120px] mt-[40px] font-medium" data-translate="conclusion">Висновок</p>
-    <div class="bg-white sm:mx-[190px] mt-[40px] mb-[90px] rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
-      <h6 class="text-[30px] sm:text-[50px] w-[300px] sm:w-[1400px] p-5 sm:p-8 font-semibold" data-translate="conclusion1">Бог бачить усе наперед, але не змушує нас чинити так чи інакше. 
+    <p id="conclusion" class="text-[45px] sm:text-[120px] mt-[40px] font-medium" data-translate="conclusion">Висновок</p>
+    <div class="bg-white/30 sm:mx-96 m-5 mb-[90px] rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <h6 class="text-[25px] sm:text-[35px] w-auto p-3 sm:p-8 font-semibold" data-translate="conclusion1">Бог бачить усе наперед, 
+        але не змушує нас чинити так чи інакше. 
         Ми вільні. І ця свобода — дар і водночас випробування, яке показує, кого ми любимо насправді: себе, гріх чи Бога.</h6>
     </div>
-    <p id="call" class="text-[50px] sm:text-[120px] mt-[40px] font-medium" data-translate="call">Заклик</p>
-    <div class="bg-white sm:mx-[190px] mt-[40px] mb-[90px] rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
-      <p class="text-[30px] sm:text-[50px] w-[300px] sm:w-[1400px] p-5 sm:p-8 font-semibold" data-translate="finalCall">Не перекладай відповідальність на "долю" чи на "Божу волю", коли грішиш. 
+    <p id="call" class="text-[45px] sm:text-[120px] mt-[40px] font-medium" data-translate="call">Заклик</p>
+    <div class="bg-white/30 sm:mx-96 m-5 rounded-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+      <p class="text-[25px] sm:text-[35px] w-auto p-3 sm:p-8 font-semibold" data-translate="finalCall">Не перекладай відповідальність на 
+        "долю" чи на "Божу волю", коли грішиш. 
         Обирай щодня шлях правди, дій за Євангелієм і молися з вірою. Тільки той, хто вірно використовує свою свободу, входить у Царство Боже.</p>
     </div>
   </div>
+  <script>
 
+    document.querySelectorAll('[data-lang]').forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        localStorage.setItem('lang', lang);
+        const elements = document.querySelectorAll('[data-translate]');
+        translatePage(lang, elements);
+      });
+    });
+  </script>
   <script src="translations.js"></script>  <script>
-    // Add this before other scripts
+
     const menuBtn = document.getElementById('menuBtn');
     const closeBtn = document.getElementById('closeBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -188,10 +198,8 @@
       }
       
       if (currentScroll > lastScroll) {
-        // Scrolling down
         header.style.transform = 'translateY(-100%)';
       } else {
-        // Scrolling up
         header.style.transform = 'translateY(0)';
       }
       
